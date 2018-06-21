@@ -2,6 +2,9 @@
     <head>
         <title>Rolling a Pair of Dice</title>
         <style>
+            .gridcell {
+                padding-bottom: 12px;
+            }
         </style>
     </head>
     <body>
@@ -36,11 +39,9 @@
                 DiceDiv.appendChild(newdiv);
             }
             var GraphBoxes = document.getElementById("GraphBoxes");            
-            for (var k = 1; k <=10; k++) {
+            for (var k = 1; k <=11; k++) {
                 var newboxes = document.createElement("div");
-                newboxes.className = "boxes";
-                newboxes.textContent = (k+1);
-                newboxes.setAttribute("style", "background: black; width: "+count[k] + "px; height: 20px; outline: 1px solid red; padding-bottom: 15px;");
+                newboxes.setAttribute("style", "background: black; width: " +count[k-1] + "px; height: 20px; outline: 1px solid red; position: relative; left: 50px; padding-bottom: 10px; bottom: 338px;");
                 GraphBoxes.appendChild(newboxes);
             }
         </script>
